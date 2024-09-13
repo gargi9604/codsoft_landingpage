@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeMart</title>
+
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <header>
+<div class="navbar">
+    <div class="nav-logo border">
+        <div class="logo"></div>
+    </div>
+    <div class="nav-search">
+        <input placeholder="Search Products.." class="search-input">
+        <div class="nav-searchicon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <div class="dropdown">
+        <i class="fa-solid fa-circle-user"></i>
+        <button class="dropbtn">Login 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="login.html">Login</a>
+          <a href="signup.html">Sign Up</a>
+        </div>
+      </div> 
+
+      <div class="dropdown">
+        <i class="fa-solid fa-store"></i>
+        <button class="dropbtn">Become a seller 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="sellerreg.html">Register</a>
+          <a href="login.html">Login</a>
+        </div>
+      </div> 
+    
+
+    <div class="nav-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        Cart
+    </div>
+</div>
+<div class="panel">
+    <div class="panel-Crafts">
+        <i class="fa-solid fa-paper-plane"></i>
+    Crafts
+   
+    </div>
+    <div class="panel-Jewellery">
+      <i class="fa-solid fa-gem"></i>
+     Jewellery
+    </div>
+    <div class="panel-Decoratives">
+        <i class="fa-solid fa-heart"></i>
+      Decoratives
+     
+    </div>
+    <div class="panel-Clothing">
+        <i class="fa-solid fa-shirt"></i>
+      Clothing
+     
+    </div>
+    <div class="panel-Others">
+        <i class="fa-solid fa-square-caret-down"></i>
+      Others
+    
+    </div>
+  </div>
+
+</header>
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="fake1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="fake2.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="fake3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+            
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+    </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 5000); // Change image every 5seconds
+            }
+        </script>
+       <br><br>
+
+
+       <section class="trending-product" id="trending">
+        <div class="center-text">
+          <h2>Our Trending <span>Products</span></h2>
+        </div> 
+
+        <div class="products">
+          <div class="row">
+            <img src="decortive1.jpg" alt="">
+            <div class="product-text">
+              <h5>Sale</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>bottle with mirror work</h4>
+                <p>INR 400</p>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="row">
+            <img src="decortive2.jpg" alt="">
+            <div class="product-text">
+              <h5>New</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>decoration 2</h4>
+                <p>INR 500</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <img src="craft7.jpg" alt="">
+            <div class="product-text">
+              <h5>Hot</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>craft 1</h4>
+                <p>INR 400</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <img src="craft8.jpg" alt="">
+            <div class="product-text">
+              <h5>Sale</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>craft 2</h4>
+                <p>INR 300</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <img src="jewellery10.jpg" alt="">
+            <div class="product-text">
+              <h5>New</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>jewellery 1</h4>
+                <p>INR 200</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <img src="jewellery9.jpg" alt="">
+            <div class="product-text">
+              <h5>New</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>jewellery 2</h4>
+                <p>INR 200</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <img src="clothe9.jpg" alt="">
+            <div class="product-text">
+              <h5>New</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>clothes 1</h4>
+                <p>INR 300</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <img src="clothe10.jpg" alt="">
+            <div class="product-text">
+              <h5>Hot</h5>
+              <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+              <div class="ratting">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+              <div class="price">
+                <h4>clothes 2</h4>
+                <p>INR 600</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+       </section>
+        <br><br>
+       <section class="catogory">
+        <div class="center-text">
+          <h2>Shop By Catogories</h2>
+        </div>
+        <br>
+        <div class="catogories">
+          <div class="jewellery">
+          <img src="1.png" alt="">
+            <div class="name">
+              <h4>Jewellery</h4>
+            </div>
+          </div>
+
+          <div class="cloths">
+            <img src="2.png" alt="">
+              <div class="name">
+                <h4>Clothes</h4>
+              </div>
+            </div>
+
+            <div class="crafts">
+              <img src="3.png" alt="">
+                <div class="name">
+                  <h4>Crafts</h4>
+                </div>
+              </div>
+
+              <div class="decoratives">
+                <img src="4.png" alt="">
+                  <div class="name">
+                    <h4>Decoratives</h4>
+                  </div>
+                </div>
+            </div>
+       </section>
+<br><br>
+       <section class="client-reviews">
+          <div class="reviews">
+            <h3>Client Reviews</h3>
+            <div class="user1">
+              <img src="user1.png" alt="">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, illum consectetur animi odio iure nulla perferendis a? Error est excepturi harum doloribus consequuntur aliquid laboriosam facilis ipsam sapiente. Asperiores, impedit!</p>
+              <h2>User 1</h2>
+            </div>
+            <div class="user2">
+              <img src="user2.png" alt="">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, illum consectetur animi odio iure nulla perferendis a? Error est excepturi harum doloribus consequuntur aliquid laboriosam facilis ipsam sapiente. Asperiores, impedit!</p>
+              <h2>User 2</h2>
+            </div>
+
+          </div>
+          
+
+       </section>
+<br><br>
+       <section class="contact">
+        <div class="contact-info">
+          <div class="first-info">
+            <img src="logo4.png" alt="">
+            <p>Vadodara,Gujarat,India</p>
+            <P>0123456789</P>
+            <p>abc@gmail.com</p>
+
+            <div class="social-icon">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="second-info">
+            <h4>Support</h4>
+            <p>Contact Us</p>
+            <p>About Page</p>
+            <p>Size Guide</p>
+            <p>Shopping & Resturns</p>
+            <p>Privacy</p>
+          </div>
+
+          <div class="third-info">
+            <h4>Shop</h4>
+            <p>Clothes</p>
+            <p>Jewellery</p>
+            <p>Decoratives</p>
+            <p>Crafts</p>
+            <p>Discount</p>
+          </div>
+
+          <div class="forth-info">
+            <h4>Company</h4>
+            <p>Company</p>
+            <p>Blog</p>
+            <p>Affiliate</p>
+            <p>Login</p>
+          </div>
+
+          <div class="five">
+            <h4>Subscribe</h4>
+            <p>Receive Updates,Hot deals, Discounts sent straight in your inbox daily</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eligendi in natus facere ipsum, fugiat quia autem voluptates suscipit nesciunt qui illo.</p>
+          </div>
+        </div>
+       </section>
+
+       <div class="end-text">
+        <p>Copyright &copy @2024. All Rights Reserved.Designed by Gargi Patel.</p>
+       </div>
+</body>
+</html>

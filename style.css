@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    border: border-box;
+
+}
+
+.navbar {
+    margin-top: 0px;
+    display: flex;
+    height: 150px;
+    background-color:white;
+    color: black;
+    align-items:start;
+}
+
+.nav-logo {
+    height: 30px;
+    width: 80px;
+}
+
+.logo {
+    display: flex;
+    background-image: url("logo3.png");
+    background-size: cover;
+    background-position: top;
+    position: absolute;
+    height: 143px;
+    width: 395px;
+    padding-left: 20px;
+    margin-left: 10px;  
+}
+
+
+
+.nav-search {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 45px;
+    margin-left: 300px;
+    margin-top: 68px;
+    border-radius: 4px;
+ 
+}
+.search-input {
+    display: flex;
+    width: 500px;
+    border-radius: 4px;
+    font-size: 25px;
+}
+.nav-searchicon {
+    width: 35px;
+    font-size: 25px ;
+    padding-top: 10px;
+    padding-left: 7px;
+}
+
+
+.nav-cart {
+    display: flex;
+    margin-top: 80px;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+.panel {
+    display: flex;
+    height: 50px;
+    background-color: black;
+    color: white;
+   justify-content: space-evenly;
+    align-items: center;
+  }
+  
+
+  .panel-Crafts{
+    display: flex;
+    margin-top: 10px;
+    font-size: 25px;  
+}
+
+.panel-Crafts:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+  .panel-Jewellery {
+    display: flex;
+    margin-top: 10px;
+    font-size: 25px;
+    margin-left: 5px;
+
+    
+  }
+
+  .panel-Jewellery:hover{
+    border: 1px solid white;
+    cursor: pointer;
+  }
+
+  .panel-Decoratives{
+    display: flex;
+    margin-top: 10px;
+    font-size: 25px;
+  
+  }
+
+  .panel-Decoratives:hover{
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  
+  .panel-Clothing{
+    display: flex;
+    margin-top: 10px;
+    font-size: 25px;
+
+  }
+
+  .panel-Clothing:hover{
+    border: 1px solid white;
+    cursor: pointer;
+  }
+
+  .panel-Others{
+    display: flex;
+    margin-top: 10px;
+    font-size: 25px;
+
+  }
+
+  .panel-Others:hover{
+    border: 1px solid white;
+    cursor: pointer;
+  }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin-left: 40px;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.dropdown .dropbtn {
+    padding-top: 0px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: black;
+    
+    background-color: inherit;
+    font-family: inherit;
+    margin-top: 50px;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    border:2px solid black;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1500px;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Caption text */
+.text {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+    /* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #153add;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+.center-text h2{
+  color: #111;
+  font-size: 28px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.products{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+  gap:2rem;
+  padding: 10px 80px;
+}
+.row{
+  position: relative;
+  transition: all .40s;
+}
+.row img{
+  width:100%;
+  height: auto;
+  transition: all .40s;
+}
+.row img:hover{
+  transform: scale(0.9);
+}
+.product-text h5{
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: red;
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+.heart-icon{
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  
+}
+.heart-icon:hover{
+  color: red;
+  cursor: pointer;
+}
+.ratting{
+  color: #FF8C00;
+  font-size: 18px;
+}
+.price h4{
+  color: #111;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.price p{
+  color: #151515;
+  font-size: 14px;
+  font-weight: 550;
+}
+
+
+.catogories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.catogories img{
+  width:300px;
+  height: 300px;
+  transition: all .40s;
+  
+}
+.catogories img:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.catogories h4{
+  margin-left: 120px;
+  margin-top: 10px;
+}
+.client-reviews{
+  background-color: #F3F4F6;
+  padding: 10px 80px;
+}
+.reviews{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  gap: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+.reviews h3{
+  color: #111;
+  font-size: 25px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 700;
+}
+.reviews img{
+  width: 100px;
+  height: auto;
+  border-radius: 50px;
+  margin: 10px 0px;
+}
+.reviews p{
+  color: #707070;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+.reviews h2{
+  font-size: 22px;
+  color: #000;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+
+
+.contact{
+  background-color: #F3F4F6;  
+  padding: 10px 80px;
+}
+.contact-info{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(160px, auto));
+  gap: 3rem;
+}
+.first-info img{
+  height: 110px;
+  width: 200px;
+}
+.contact-info h4{
+  color: #212529;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.contact-info p{
+  color: #565656;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all .42s;
+}
+
+.contact-info p:hover{
+  color: red;
+}
+.social-icon i{
+  color: #565656;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: all .42s;
+}
+.social-icon i:hover{
+  transform: scale(1.3);
+} 
+
+.end-text{
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+}
+.end-text p{
+  color: white;
+  text-transform: capitalize;
+}
